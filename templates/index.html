@@ -1,0 +1,259 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cab Ride Demand Prediction</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #eef3ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 460px;
+            padding: 30px 40px;
+            margin-top: 40px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #253a9a;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 22px;
+        }
+
+        .info-box {
+            background: #f8f9ff;
+            border-left: 4px solid #3047b5;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-box strong {
+            color: #1c2e82;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #c7c7c7;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 14px;
+            background: #3047b5;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #253a9a;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: #1b1b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cab Ride Demand Predictor 🚖</h1>
+        <p class="subtitle">Forecast estimated ride requests based on location & conditions</p>
+
+        <div class="info-box">
+            <strong>Why this matters?</strong><br>
+            • 70% of cab delays happen due to unpredictable demand patterns.<br>
+            • Accurate demand prediction reduces passenger wait time and increases driver earnings.<br>
+            • Companies like Uber & Ola use ML forecasting for smart cab allocation.
+        </div>
+
+        <form action="/predict" method="POST">
+            <input type="number" name="temperature" placeholder="Enter Temperature (°C)" required>
+            <input type="number" name="humidity" placeholder="Enter Humidity (%)" required>
+            <input type="number" name="hour" placeholder="Enter Hour of Day (0–23)" required>
+            <button type="submit">Predict ⟶</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
+a -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cab Ride Demand Prediction</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #eef3ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 480px;
+            padding: 30px 40px;
+            margin-top: 40px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #253a9a;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .info-box {
+            background: #f8f9ff;
+            border-left: 4px solid #3047b5;
+            padding: 10px 14px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-box strong {
+            color: #1c2e82;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #c7c7c7;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 14px;
+            background: #3047b5;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #253a9a;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: #1b1b1b;
+        }
+
+        .about {
+            margin-top: 22px;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.45;
+            background: #fafbff;
+            padding: 12px 15px;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cab Ride Demand Predictor 🚖</h1>
+        <p class="subtitle">Forecast ride demand based on temperature, humidity & time of day</p>
+
+        <div class="info-box">
+            <strong>Why this matters?</strong><br>
+            • Over 70% of cab delays happen due to unpredictable demand fluctuations.<br>
+            • Accurate forecasting helps reduce waiting time & improve driver earnings.<br>
+            • ML-based demand forecasting is used by Uber, Ola & Lyft to optimize cab allocation.
+        </div>
+
+        <form action="/predict" method="POST">
+            <input type="number" name="temperature" placeholder="Enter Temperature (°C)" required>
+            <input type="number" name="humidity" placeholder="Enter Humidity (%)" required>
+            <input type="number" name="hour" placeholder="Enter Hour of Day (0–23)" required>
+            <button type="submit">Predict ⟶</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+
+        <div class="about">
+            This project uses a trained Machine Learning model (Random Forest) deployed through a Flask backend. 
+            The system enables real-time prediction of expected cab ride demand for smarter and more efficient 
+            transportation planning.
+        </div>
+
+        <footer>
+            Developed with ❤ by <strong>Group 20</strong>
+        </footer>
+    </div>
+</body>
+</html>
