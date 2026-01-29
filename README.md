@@ -102,7 +102,7 @@ cab_demand_forecast/
 
 ## How to Run the Project Locally
 
-### 1️⃣ Clone the repository
+### 1️ Clone the repository
 ```bash
 git clone <your-github-repository-link>
 cd cab_demand_forecast
