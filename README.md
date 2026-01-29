@@ -86,7 +86,7 @@ Displayed on Web Interface
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 cab_demand_forecast/
 │
