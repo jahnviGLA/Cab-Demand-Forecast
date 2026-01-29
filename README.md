@@ -100,7 +100,7 @@ cab_demand_forecast/
 
 ---
 
-## 🚀 How to Run the Project Locally
+## How to Run the Project Locally
 
 ### 1️⃣ Clone the repository
 ```bash
