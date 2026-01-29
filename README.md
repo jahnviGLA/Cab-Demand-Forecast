@@ -3,7 +3,7 @@
 This project is an end-to-end Machine Learning application that predicts the **expected number of cab ride requests** based on environmental and temporal conditions such as **temperature, humidity, and hour of the day**.  
 The trained model is deployed using a **Flask backend** and accessed through a **web-based interface**.
 
----
+--- 
 
 ## Project Motivation
 
