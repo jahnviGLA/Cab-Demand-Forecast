@@ -106,13 +106,13 @@ cab_demand_forecast/
 ```bash
 git clone <your-github-repository-link>
 cd cab_demand_forecast
-2️⃣ Install dependencies
+2️ Install dependencies
 pip install -r requirements.txt
-3️⃣ Run the Flask application
+3️ Run the Flask application
 python app.py
-4️⃣ Open in browser
+4️ open in browser
 http://127.0.0.1:5000/
-🧪 Sample Input & Output
+Sample Input & Output
 Input
 
 Temperature: 35°C
@@ -126,7 +126,7 @@ Output
 Predicted Ride Demand: ~55
 This indicates that approximately 55 cab ride requests are expected under the given conditions.
 
-✅ Key Features
+ Key Features
 End-to-end Machine Learning pipeline
 
 Model training, evaluation, and deployment
@@ -137,7 +137,7 @@ Clean and user-friendly web interface
 
 Suitable for academic and learning purposes
 
-🔍 Challenges Addressed
+ Challenges Addressed
 Lack of publicly available cab demand datasets → synthetic dataset generation
 
 Handling multiple input features → feature engineering
