@@ -41,7 +41,7 @@ Random Forest was selected due to its superior performance, ability to handle no
 
 ---
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **RMSE (Root Mean Squared Error):** Low value indicating accurate predictions  
 - **R² Score:** High value indicating strong explanatory power  
@@ -50,7 +50,7 @@ The model explains most of the variance in cab demand and produces reliable fore
 
 ---
 
-## 🧱 System Architecture
+## System Architecture
 
 User Input (HTML Form)
 ↓
@@ -65,7 +65,7 @@ Displayed on Web Interface
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 ### Machine Learning
 - Python
