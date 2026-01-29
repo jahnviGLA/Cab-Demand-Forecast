@@ -1,11 +1,11 @@
-# 🚖 Cab Ride Demand Prediction using Machine Learning
+# Cab Ride Demand Prediction using Machine Learning
 
 This project is an end-to-end Machine Learning application that predicts the **expected number of cab ride requests** based on environmental and temporal conditions such as **temperature, humidity, and hour of the day**.  
 The trained model is deployed using a **Flask backend** and accessed through a **web-based interface**.
 
 ---
 
-## 📌 Project Motivation
+## Project Motivation
 
 Cab ride demand in urban areas varies significantly depending on time, weather, and human activity patterns.  
 Incorrect demand estimation often leads to:
@@ -17,7 +17,7 @@ Accurate demand forecasting helps in **smart cab allocation**, **efficient resou
 
 ---
 
-## 🎯 Objective
+## Objective
 
 To design and deploy a Machine Learning-based system that:
 - Predicts cab ride demand based on real-world conditions
