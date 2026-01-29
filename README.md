@@ -26,7 +26,7 @@ To design and deploy a Machine Learning-based system that:
 
 ---
 
-## 🧠 Machine Learning Approach
+## Machine Learning Approach
 
 - **Problem Type:** Regression  
 - **Target Variable:** Number of cab ride requests  
